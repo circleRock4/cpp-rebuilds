@@ -1,0 +1,8 @@
+# ignore compiled files
+*.0
+
+# ignore executables
+a.out
+
+# macOS
+.DS_Store
