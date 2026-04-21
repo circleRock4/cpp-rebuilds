@@ -2,7 +2,7 @@ com = clang++
 flags = -std=c++17 -Wall -g
 
 main: main.o login.o
-	$(com) = main.o login.o -o main
+	$(com) main.o login.o -o main
 
 main.o: main.cpp login.h
 	$(com) $(flags) -c main.cpp -o main.o
