@@ -6,12 +6,16 @@
 #include <cmath> // for power function
 #include <cstdlib> // rand() 
 #include <ctime> // for time() (plan to pair with rand())
-#include "login.h"
+#include "user.h"
 using namespace std;
 
 int main(){
 
-    UserLogin user;
+cout << "Would you like to register a user? (yes or no): ";
+
+
+/*
+    User user;
     
     string name;
     cout << "enter a name: ";
@@ -26,7 +30,7 @@ int main(){
     cin >> answer;
 
     user.printInfo(name, password, answer);
-
+*/
 
     return 0;
 }
