@@ -1,36 +1,22 @@
-#include <iostream>
-#include <fstream> // for file reading
-#include <string.h> 
-#include <vector>
-#include <functional> // for hashing
-#include <cmath> // for power function
-#include <cstdlib> // rand() 
-#include <ctime> // for time() (plan to pair with rand())
+
 #include "user.h"
+#include "database.h"
+#include <iostream>
+#include <cctype> // for user prompt
+#include <vector>
 using namespace std;
 
-int main(){
+int main()
+{
+    cout << "Hello, would you like to add users to the database? (1)";
+    int x = 0;
+    cin >> x;
+    string name = "db.txt";
 
-cout << "Would you like to register a user? (yes or no): ";
-
-
-/*
-    User user;
-    
-    string name;
-    cout << "enter a name: ";
-    cin >> name;
-
-    string password;
-    cout << "\nenter a password: ";
-    cin >> password;
-
-    string answer;
-    cout << "\nenter an answer: ";
-    cin >> answer;
-
-    user.printInfo(name, password, answer);
-*/
-
+    DataBase db;
+    int er;
+    er = db.userRegister(name);
+    db.readDataBase(name);
+           
     return 0;
 }

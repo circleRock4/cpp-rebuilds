@@ -1,10 +1,9 @@
-// to define the User object that will be stored in the database
-
 #ifndef USER_H
 #define USER_H
 
 #include <fstream>
 #include <string>
+#include <limits>
 #include <iostream>
 using namespace std;
 
@@ -14,9 +13,10 @@ class User{
         string password;
         string answer;
     public:
-        void printInfo(string username, string password, string answer); // just to check that info is in object
-        void Registration(string username, string password, string answer); // when a new user registers to the db
-        
+        void registration(); // kind of the master function that uses the other functions
+        string returnUserName() const;
+        string returnPassWord() const;
+        string returnAnswer() const;
 };
 
 #endif
